@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Update Course</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://bootswatch.com/5/lux/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+    .form-title {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 24px;
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #007bff;
+    }
+    .btn-primary {
+      background-color: #495057;
+      border-color: #495057;
+      padding: 14px 20px;
+      width: 100%;
+    }
+    .btn-primary:hover {
+      background-color: #343a40;
+      border-color: #343a40;
+    }
+    .btn-clear {
+      background-color: #f44336;
+      border-color: #f44336;
+      color: white;
+      width: 100%;
+      padding: 14px 20px;
+    }
+    .btn-clear:hover {
+      background-color: #d32f2f;
+      border-color: #d32f2f;
+    }
+    .d-grid {
+      display: grid;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2 class="form-title">Update Course</h2>
+  <form action="course_update.php" method="post">
+    <input type="hidden" name="course_id" id="course_id" value="">
+
+    <div class="mb-3">
+      <label for="cname" class="form-label"><b>Course Name</b></label>
+      <input type="text" class="form-control" id="cname" name="cname" placeholder="Enter Course Name" required>
+    </div>
+    <div class="mb-3">
+      <label for="teacher" class="form-label"><b>Teacher ID</b></label>
+      <input type="text" class="form-control" id="teacher" name="teacher" placeholder="Enter Teacher ID" required>
+    </div>
+    <div class="mb-3">
+      <label for="semester" class="form-label"><b>Academic Semester</b></label>
+      <input type="text" class="form-control" id="semester" name="semester" placeholder="Enter Academic Semester" required>
+    </div>
+
+    <div class="d-grid">
+      <button type="button" class="btn btn-clear" onclick="clearFields();">Clear</button>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Function to clear input fields only
+  function clearFields() {
+    document.getElementById("cname").value = "";
+    document.getElementById("teacher").value = "";
+    document.getElementById("semester").value = "";
+  }
+
+  // Get course ID from URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const courseId = urlParams.get('id');
+  document.getElementById("course_id").value = courseId;
+</script>
+
+</body>
+</html>
+

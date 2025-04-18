@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic - Profile</title>
+  <link href="https://bootswatch.com/5/lux/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="admin.html">Admin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="student_list.php">Student List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="teacher_list.php">Teacher List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="course_list.php">Course List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="enrollment_list.php">Enrollment list</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <a href="login_form.html" class="btn btn-secondary my-2 my-sm-0">Logout</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Display -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <img src="admin.png" alt="Profile Picture" class="profile-img">
+            <h1 class="card-title">Welcome!</h1>
+            <p class="card-text">You are logged in as an admin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
